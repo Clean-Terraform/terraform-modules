@@ -23,8 +23,7 @@ variable "tags" {
 locals {
   delimiter  = "/"
 
-  id         = lower(join(local.delimiter, compact(concat(list(var.env, var.name), list(var.key)))))
-  name       = lower(format("%v", var.name))
+  id         = "/${lower(join(local.delimiter, compact(concat(list(var.env, var.name), list(var.key)))))}"
   env        = lower(format("%v", var.env))
 
   tags = merge(
@@ -39,7 +38,6 @@ locals {
   outputs = {
     env = local.env
     id  = local.id
-    name = local.name
     tags = local.tags
   }
 }
