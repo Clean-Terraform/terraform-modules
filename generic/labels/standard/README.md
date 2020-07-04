@@ -3,6 +3,7 @@ This module enforces a stardand naming and tagging convention for resources. The
 
 * The delimiter is `-`.
 * All names are in the format `<env>-<name>-<suffix>`.
+* The name contains only alphanumeric characters and dashes.
 * All outputs are lowercase except tags can have uppercase values.
 * Includes the tags `Managed By: Terraform`, `Name: <name>`, `Environment: <env>` at a minimum.
 
@@ -20,11 +21,12 @@ module "label" {
 }
 
 resource "aws_dynamodb_table" {
-  label = module.label
+  name = module.label.id
+  tags = module.label.tags
   ...
 }
 ```
 
 ## Docs
-See [TF_DOCS](./TF_DOCS.md)
+See [TF_DOCS.md](./TF_DOCS.md)
 

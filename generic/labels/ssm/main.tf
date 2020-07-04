@@ -8,10 +8,10 @@ variable "name" {
   description = "Solution name, e.g. `user-service` or `jenkins`"
 }
 
-variable "suffix" {
+variable "key" {
   type        = string
   default     = ""
-  description = "Additional attributes to add to the name."
+  description = "The secret key name."
 }
 
 variable "tags" {
@@ -21,9 +21,9 @@ variable "tags" {
 }
 
 locals {
-  delimiter  = "-"
+  delimiter  = "/"
 
-  id         = lower(join(local.delimiter, compact(concat(list(var.env, var.name), list(var.suffix)))))
+  id         = lower(join(local.delimiter, compact(concat(list(var.env, var.name), list(var.key)))))
   name       = lower(format("%v", var.name))
   env        = lower(format("%v", var.env))
 
@@ -56,5 +56,5 @@ module "validate_standard_label" {
 
 output "outputs" {
   value       = local.outputs
-  description = "[Label Interface](https://github.com/Clean-Terraform/terraform-modules/tree/master/generic/label)"
+  description = "[Label Interface](https://github.com/Clean-Terraform/terraform-modules/tree/master/generic/labels/base/interface/README.md)"
 }
