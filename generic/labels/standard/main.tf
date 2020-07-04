@@ -56,5 +56,5 @@ module "validate_standard_label" {
 
 output "outputs" {
   value       = local.outputs
-  description = "[Label Interface](https://github.com/Clean-Terraform/terraform-modules/tree/master/generic/label)"
+  description = "[Label Interface](https://github.com/Clean-Terraform/terraform-modules/tree/master/generic/labels/base/interface/README.md)"
 }

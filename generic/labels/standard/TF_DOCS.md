@@ -19,5 +19,5 @@ No provider.
 
 | Name | Description |
 |------|-------------|
-| outputs | [Label Interface](https://github.com/Clean-Terraform/terraform-modules/tree/master/generic/label) |
+| outputs | [Label Interface](https://github.com/Clean-Terraform/terraform-modules/tree/master/generic/labels/base/interface/README.md) |
 
