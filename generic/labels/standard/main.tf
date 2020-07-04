@@ -17,7 +17,7 @@ variable "suffix" {
 variable "tags" {
   type        = map(string)
   default     = {}
-  description = "Additional tags (e.g. `map('BusinessUnit','XYZ')`"
+  description = "Additional tags, e.g. `{team = \"foo\"}`."
 }
 
 locals {

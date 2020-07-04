@@ -13,7 +13,7 @@ No provider.
 | env | Environment, e.g. 'prod', 'staging', 'dev' | `string` | n/a | yes |
 | name | Solution name, e.g. `user-service` or `jenkins` | `string` | n/a | yes |
 | suffix | Additional attributes to add to the name. | `string` | `""` | no |
-| tags | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
+| tags | Additional tags, e.g. `{team = "foo"}`. | `map(string)` | `{}` | no |
 
 ## Outputs
 

@@ -1,23 +1,22 @@
 variable "env" {
   type        = string
-  description = "Environment, e.g. 'prod', 'staging', 'dev'"
+  description = "Environment, e.g. 'prod', 'staging', 'dev'."
 }
 
 variable "name" {
   type        = string
-  description = "Solution name, e.g. `user-service` or `jenkins`"
+  description = "Solution name, e.g. `user-service` or `jenkins`."
 }
 
 variable "key" {
   type        = string
-  default     = ""
-  description = "The secret key name."
+  description = "The secret key name, e.g. mysql_password."
 }
 
 variable "tags" {
   type        = map(string)
   default     = {}
-  description = "Additional tags (e.g. `map('BusinessUnit','XYZ')`"
+  description = "Additional tags, e.g. `{team = \"foo\"}`."
 }
 
 locals {

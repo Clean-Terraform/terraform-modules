@@ -10,10 +10,10 @@ No provider.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| env | Environment, e.g. 'prod', 'staging', 'dev' | `string` | n/a | yes |
-| key | The secret key name. | `string` | `""` | no |
-| name | Solution name, e.g. `user-service` or `jenkins` | `string` | n/a | yes |
-| tags | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
+| env | Environment, e.g. 'prod', 'staging', 'dev'. | `string` | n/a | yes |
+| key | The secret key name, e.g. mysql\_password. | `string` | n/a | yes |
+| name | Solution name, e.g. `user-service` or `jenkins`. | `string` | n/a | yes |
+| tags | Additional tags, e.g. `{team = "foo"}`. | `map(string)` | `{}` | no |
 
 ## Outputs
 
