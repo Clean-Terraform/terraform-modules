@@ -46,7 +46,7 @@ module "i_base_label" {
   check = local.outputs
 }
 
-module "validate_standard_label" {
+module "validate_ssm_label" {
   source = "./validate"
   check = local.outputs
 }
