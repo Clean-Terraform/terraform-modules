@@ -31,7 +31,7 @@ locals {
     {
       "Name"            = local.id
       "Environment"     = local.env
-			"Managed By"      = "Terraform"
+			"ManagedBy"      = "Terraform"
     },
     var.tags
   )
@@ -44,8 +44,8 @@ locals {
   }
 }
 
-module "i_base_label" {
-  source = "../base/interface"
+module "iface_label" {
+  source = "../iface"
   check = local.outputs
 }
 

@@ -22,10 +22,10 @@ module "ssm_label" {
 }
 
 resource "aws_ssm_parameter" "mysql_password" {
-  name  = "module.ssm_label.id
+  name  = "module.ssm_label.outputs.id
   type  = "SecureString"
   value = "secret"
-  tags  = module.ssm_label.tags
+  tags  = module.ssm_label.outputs.tags
 }
 ```
 

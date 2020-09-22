@@ -1,10 +1,6 @@
-variable "check" {}
-
-
-locals {
-  id_valid = try(regex("^/[a-z/]+$", var.check.id))
-}
-
-output "outputs" {
-  value = var.check
+variable "check" {
+  validation {
+    condition = can(regex("^/[a-z/]+$", var.check.id))
+    error_message = "Label must begin with `/` and only be alpha-numeric and `/` characters."
+  }
 }

@@ -21,8 +21,8 @@ module "label" {
 }
 
 resource "aws_dynamodb_table" {
-  name = module.label.id
-  tags = module.label.tags
+  name = module.label.outputs.id
+  tags = module.label.outputs.tags
   ...
 }
 ```

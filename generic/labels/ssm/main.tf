@@ -41,8 +41,8 @@ locals {
   }
 }
 
-module "i_base_label" {
-  source = "../base/interface"
+module "label_iface" {
+  source = "../iface"
   check = local.outputs
 }
 
