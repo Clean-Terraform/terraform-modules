@@ -9,7 +9,7 @@ variable "name" {
 }
 
 variable "suffix" {
-  type        = string
+  type        = list(string)
   default     = ""
   description = "Additional attributes to add to the name."
 }
@@ -23,7 +23,7 @@ variable "tags" {
 locals {
   delimiter  = "-"
 
-  id         = lower(join(local.delimiter, compact(concat(list(var.env, var.name), list(var.suffix)))))
+  id         = lower(join(local.delimiter, compact(concat([var.env, var.name], var.suffix))))
   name       = lower(format("%v", var.name))
   env        = lower(format("%v", var.env))
 
@@ -31,7 +31,7 @@ locals {
     {
       "Name"            = local.id
       "Environment"     = local.env
-			"ManagedBy"      = "Terraform"
+      "ManagedBy"       = "Terraform"
     },
     var.tags
   )
