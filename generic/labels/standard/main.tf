@@ -10,7 +10,7 @@ variable "name" {
 
 variable "suffix" {
   type        = list(string)
-  default     = ""
+  default     = []
   description = "Additional attributes to add to the name."
 }
 
